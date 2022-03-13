@@ -79,12 +79,14 @@ class MainTabController: UITabBarController {
         nav.navigationBar.tintColor = .black
         return nav
     }
+    
     private func didFinishPickingMedia(_ picker: YPImagePicker) {
         picker.didFinishPicking { items, _ in
             picker.dismiss(animated: false) { // false for smooth transition
                 guard let selectedImage = items.singlePhoto?.image else { return }
                 let controller = UploadPostController()
                 controller.selectedImage = selectedImage
+                controller.delegate = self
                 let nav = UINavigationController(rootViewController: controller)
                 nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: false, completion: nil) // keep at false for smooth transition or add view states.
@@ -125,4 +127,11 @@ extension MainTabController: UITabBarControllerDelegate {
         return true
     }
     
+}
+// MARK: - UploadPostControllerDelegate
+extension MainTabController: UploadPostControllerDelegate {
+    func controllerDidFinishUploadingPost(_ controller: UploadPostController) {
+        selectedIndex = 0
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
