@@ -41,8 +41,9 @@ struct UserService {
     
     static func unfollow(uid: String, completion: @escaping(FirestoreCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
-        COLLECTION_FOLLOWING.document(currentUid).collection(UserServiceConstant.userFollowing).document(uid).delete {
+        COLLECTION_FOLLOWING.document(currentUid).collection(UserServiceConstant.userFollowing).document(uid).delete() {
             error in
+            COLLECTION_FOLLOWERS.document(uid).collection(UserServiceConstant.userFollowers).document(currentUid).delete(completion: completion)
         }
     }
 }

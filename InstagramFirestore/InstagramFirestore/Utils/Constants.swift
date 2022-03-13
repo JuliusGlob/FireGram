@@ -16,5 +16,4 @@ let COLLECTION_FOLLOWING = Firestore.firestore().collection("following")
 struct UserServiceConstant {
     static let userFollowing: String = "user-following"
     static let userFollowers: String = "user-followers"
-        
 }
