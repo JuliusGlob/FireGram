@@ -1,4 +1,7 @@
 # Welcome to Firegram
+
+- WIP
+
 - This project is based around the idea of building an app programatically, since i've been so set up on swiftui and combine it helps me keep in touch with older technologies.
 - The scope of this project is to use good programing practices in order to keep a tight attachment to POP and SOLID principles.
 - The Architecture is a mix between MVVM and MVC making sure to pull out the best out of both, we cant fully say this is an MVVM project since it laks the reactiveness proper to it however i will try to cover those problems through the use of observers.
