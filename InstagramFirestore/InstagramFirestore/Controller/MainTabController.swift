@@ -7,8 +7,10 @@
 
 import Firebase
 import UIKit
+import YPImagePicker
 
 class MainTabController: UITabBarController {
+    
     // MARK: - Properties
     private var user: User? {
         didSet {
@@ -49,8 +51,8 @@ class MainTabController: UITabBarController {
     // MARK: - Helpers
     
     private func configureViewControllers(withUser user: User) {
-        
         view.backgroundColor = .white
+        self.delegate = self
         
         let layout = UICollectionViewFlowLayout()
         let feed = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController(collectionViewLayout: layout))
@@ -77,14 +79,46 @@ class MainTabController: UITabBarController {
         nav.navigationBar.tintColor = .black
         return nav
     }
+    private func didFinishPickingMedia(_ picker: YPImagePicker) {
+        picker.didFinishPicking { items, _ in
+            picker.dismiss(animated: true) {
+                guard let selectedImage = items.singlePhoto?.image else { return }
+                print("DEBUG: Selected image is \(selectedImage)")
+            }
+        }
+    }
 }
 
-// MARK - AuthenticationDelegate
+// MARK: - AuthenticationDelegate
 extension MainTabController: AuthenticationDelegate {
     func authenticationDidComplete() {
         fetchUser()
         self.dismiss(animated: true, completion: nil)
     }
-    
+}
+
+// MARK: - UITabBarControllerDelegate
+/// quiick note here.. if you are trying to implement this on your app, you will have to modify your info.plist to allow privacy-sensitive data referr to YPImagePicker documentation
+extension MainTabController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        let index = viewControllers?.firstIndex(of: viewController)
+        if index == 2 {
+            var config = YPImagePickerConfiguration()
+            config.library.mediaType = .photo
+            config.shouldSaveNewPicturesToAlbum = false //toggle to true if you wish for pictures you take to be saved
+            config.startOnScreen = .library
+            config.screens = [.library]
+            config.hidesStatusBar = false
+            config.hidesBottomBar = false
+            config.library.maxNumberOfItems = 1 // change to allow maximum n. of posts
+            
+            let picker = YPImagePicker(configuration: config)
+            picker.modalPresentationStyle = .fullScreen
+            present(picker, animated: true, completion: nil)
+            
+            didFinishPickingMedia(picker)
+        }
+        return true
+    }
     
 }

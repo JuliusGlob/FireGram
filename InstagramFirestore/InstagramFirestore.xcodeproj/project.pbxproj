@@ -13,6 +13,7 @@
 		303A3DF127DD6F1900BC8D02 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 303A3DF027DD6F1900BC8D02 /* FirebaseAuth */; };
 		303A3DF327DD6F1900BC8D02 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 303A3DF227DD6F1900BC8D02 /* FirebaseFirestore */; };
 		303A3DF527DD6F1900BC8D02 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 303A3DF427DD6F1900BC8D02 /* FirebaseDatabase */; };
+		303A3DF827DD88B200BC8D02 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 303A3DF727DD88B200BC8D02 /* YPImagePicker */; };
 		305DDDB627DBDFDF00F016C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DDDB527DBDFDF00F016C8 /* AppDelegate.swift */; };
 		305DDDB827DBDFDF00F016C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DDDB727DBDFDF00F016C8 /* SceneDelegate.swift */; };
 		305DDDBF27DBDFE000F016C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DDDBE27DBDFE000F016C8 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 				303A3DEF27DD6F1900BC8D02 /* FirebaseMessaging in Frameworks */,
 				303A3DEA27DD6EEF00BC8D02 /* SDWebImage in Frameworks */,
 				303A3DED27DD6F1900BC8D02 /* FirebaseStorage in Frameworks */,
+				303A3DF827DD88B200BC8D02 /* YPImagePicker in Frameworks */,
 				303A3DF327DD6F1900BC8D02 /* FirebaseFirestore in Frameworks */,
 				303A3DF127DD6F1900BC8D02 /* FirebaseAuth in Frameworks */,
 			);
@@ -229,6 +231,7 @@
 				303A3DF027DD6F1900BC8D02 /* FirebaseAuth */,
 				303A3DF227DD6F1900BC8D02 /* FirebaseFirestore */,
 				303A3DF427DD6F1900BC8D02 /* FirebaseDatabase */,
+				303A3DF727DD88B200BC8D02 /* YPImagePicker */,
 			);
 			productName = InstagramFirestore;
 			productReference = 305DDDB227DBDFDF00F016C8 /* InstagramFirestore.app */;
@@ -260,6 +263,7 @@
 			packageReferences = (
 				303A3DE827DD6EEF00BC8D02 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				303A3DEB27DD6F1900BC8D02 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				303A3DF627DD88B200BC8D02 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = 305DDDB327DBDFDF00F016C8 /* Products */;
 			projectDirPath = "";
@@ -523,6 +527,14 @@
 				minimumVersion = 8.13.0;
 			};
 		};
+		303A3DF627DD88B200BC8D02 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -555,6 +567,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 303A3DEB27DD6F1900BC8D02 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		303A3DF727DD88B200BC8D02 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 303A3DF627DD88B200BC8D02 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
