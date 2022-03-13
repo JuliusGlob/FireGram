@@ -14,6 +14,9 @@
 		303A3DF327DD6F1900BC8D02 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 303A3DF227DD6F1900BC8D02 /* FirebaseFirestore */; };
 		303A3DF527DD6F1900BC8D02 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 303A3DF427DD6F1900BC8D02 /* FirebaseDatabase */; };
 		303A3DF827DD88B200BC8D02 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 303A3DF727DD88B200BC8D02 /* YPImagePicker */; };
+		303A3DFA27DD8DCB00BC8D02 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A3DF927DD8DCB00BC8D02 /* UploadPostController.swift */; };
+		303A3DFC27DD972500BC8D02 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A3DFB27DD972500BC8D02 /* InputTextView.swift */; };
+		303A3DFE27DDB64800BC8D02 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A3DFD27DDB64800BC8D02 /* PostService.swift */; };
 		305DDDB627DBDFDF00F016C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DDDB527DBDFDF00F016C8 /* AppDelegate.swift */; };
 		305DDDB827DBDFDF00F016C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DDDB727DBDFDF00F016C8 /* SceneDelegate.swift */; };
 		305DDDBF27DBDFE000F016C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DDDBE27DBDFE000F016C8 /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303A3DF927DD8DCB00BC8D02 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		303A3DFB27DD972500BC8D02 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		303A3DFD27DDB64800BC8D02 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		305DDDB227DBDFDF00F016C8 /* InstagramFirestore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305DDDB527DBDFDF00F016C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305DDDB727DBDFDF00F016C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 				305DDDCD27DBE01D00F016C8 /* AuthService.swift */,
 				305DDDCE27DBE01D00F016C8 /* ImageUploader.swift */,
 				305DDE8527DCF8A800F016C8 /* UserService.swift */,
+				303A3DFD27DDB64800BC8D02 /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 				305DDE5D27DBE09400F016C8 /* NotificationController.swift */,
 				305DDE5827DBE09400F016C8 /* ProfileController.swift */,
 				305DDE5E27DBE09400F016C8 /* SearchController.swift */,
+				303A3DF927DD8DCB00BC8D02 /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 			children = (
 				305DDE6827DBE0B000F016C8 /* Extensions.swift */,
 				305DDE8727DCF8DF00F016C8 /* Constants.swift */,
+				303A3DFB27DD972500BC8D02 /* InputTextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -294,6 +303,7 @@
 			files = (
 				305DDE6427DBE09400F016C8 /* LoginController.swift in Sources */,
 				305DDE8327DC000A00F016C8 /* ProfileHeader.swift in Sources */,
+				303A3DFA27DD8DCB00BC8D02 /* UploadPostController.swift in Sources */,
 				305DDE6F27DBE0D400F016C8 /* AuthenticationViewModel.swift in Sources */,
 				305DDE6027DBE09400F016C8 /* ImageSelectorController.swift in Sources */,
 				305DDE6627DBE09400F016C8 /* SearchController.swift in Sources */,
@@ -307,6 +317,7 @@
 				305DDE8C27DD01B500F016C8 /* ProfileHeaderViewModel.swift in Sources */,
 				305DDE8827DCF8DF00F016C8 /* Constants.swift in Sources */,
 				305DDDB827DBDFDF00F016C8 /* SceneDelegate.swift in Sources */,
+				303A3DFE27DDB64800BC8D02 /* PostService.swift in Sources */,
 				305DDE9227DD35E700F016C8 /* UserCellViewModel.swift in Sources */,
 				305DDDCF27DBE01E00F016C8 /* AuthService.swift in Sources */,
 				305DDE6327DBE09400F016C8 /* RegistrationController.swift in Sources */,
@@ -315,6 +326,7 @@
 				305DDE8627DCF8A800F016C8 /* UserService.swift in Sources */,
 				305DDE8127DC000100F016C8 /* ProfileCell.swift in Sources */,
 				305DDE6927DBE0B000F016C8 /* Extensions.swift in Sources */,
+				303A3DFC27DD972500BC8D02 /* InputTextView.swift in Sources */,
 				305DDE6C27DBE0CA00F016C8 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
