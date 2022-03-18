@@ -44,6 +44,9 @@
 		305DDE8E27DD0C3B00F016C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305DDE8D27DD0C3B00F016C8 /* GoogleService-Info.plist */; };
 		305DDE9027DD298200F016C8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DDE8F27DD298200F016C8 /* UserCell.swift */; };
 		305DDE9227DD35E700F016C8 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DDE9127DD35E700F016C8 /* UserCellViewModel.swift */; };
+		30B0725727E520D5003B14AA /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 30B0725627E520D5003B14AA /* JGProgressHUD */; };
+		30B0725927E52457003B14AA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0725827E52457003B14AA /* Post.swift */; };
+		30B0725B27E52F61003B14AA /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0725A27E52F61003B14AA /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +82,8 @@
 		305DDE8D27DD0C3B00F016C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		305DDE8F27DD298200F016C8 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		305DDE9127DD35E700F016C8 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
+		30B0725827E52457003B14AA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		30B0725A27E52F61003B14AA /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,7 @@
 				303A3DEF27DD6F1900BC8D02 /* FirebaseMessaging in Frameworks */,
 				303A3DEA27DD6EEF00BC8D02 /* SDWebImage in Frameworks */,
 				303A3DED27DD6F1900BC8D02 /* FirebaseStorage in Frameworks */,
+				30B0725727E520D5003B14AA /* JGProgressHUD in Frameworks */,
 				303A3DF827DD88B200BC8D02 /* YPImagePicker in Frameworks */,
 				303A3DF327DD6F1900BC8D02 /* FirebaseFirestore in Frameworks */,
 				303A3DF127DD6F1900BC8D02 /* FirebaseAuth in Frameworks */,
@@ -149,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				305DDE8927DCFB9A00F016C8 /* User.swift */,
+				30B0725827E52457003B14AA /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +177,7 @@
 				305DDE6E27DBE0D400F016C8 /* AuthenticationViewModel.swift */,
 				305DDE8B27DD01B500F016C8 /* ProfileHeaderViewModel.swift */,
 				305DDE9127DD35E700F016C8 /* UserCellViewModel.swift */,
+				30B0725A27E52F61003B14AA /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 				303A3DF227DD6F1900BC8D02 /* FirebaseFirestore */,
 				303A3DF427DD6F1900BC8D02 /* FirebaseDatabase */,
 				303A3DF727DD88B200BC8D02 /* YPImagePicker */,
+				30B0725627E520D5003B14AA /* JGProgressHUD */,
 			);
 			productName = InstagramFirestore;
 			productReference = 305DDDB227DBDFDF00F016C8 /* InstagramFirestore.app */;
@@ -273,6 +282,7 @@
 				303A3DE827DD6EEF00BC8D02 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				303A3DEB27DD6F1900BC8D02 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				303A3DF627DD88B200BC8D02 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				30B0725527E520D5003B14AA /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 305DDDB327DBDFDF00F016C8 /* Products */;
 			projectDirPath = "";
@@ -320,10 +330,12 @@
 				303A3DFE27DDB64800BC8D02 /* PostService.swift in Sources */,
 				305DDE9227DD35E700F016C8 /* UserCellViewModel.swift in Sources */,
 				305DDDCF27DBE01E00F016C8 /* AuthService.swift in Sources */,
+				30B0725927E52457003B14AA /* Post.swift in Sources */,
 				305DDE6327DBE09400F016C8 /* RegistrationController.swift in Sources */,
 				305DDE6127DBE09400F016C8 /* ProfileController.swift in Sources */,
 				305DDE6D27DBE0CA00F016C8 /* FeedCell.swift in Sources */,
 				305DDE8627DCF8A800F016C8 /* UserService.swift in Sources */,
+				30B0725B27E52F61003B14AA /* PostViewModel.swift in Sources */,
 				305DDE8127DC000100F016C8 /* ProfileCell.swift in Sources */,
 				305DDE6927DBE0B000F016C8 /* Extensions.swift in Sources */,
 				303A3DFC27DD972500BC8D02 /* InputTextView.swift in Sources */,
@@ -547,6 +559,14 @@
 				minimumVersion = 5.2.1;
 			};
 		};
+		30B0725527E520D5003B14AA /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -584,6 +604,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 303A3DF627DD88B200BC8D02 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
 			productName = YPImagePicker;
+		};
+		30B0725627E520D5003B14AA /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30B0725527E520D5003B14AA /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
