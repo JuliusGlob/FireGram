@@ -22,12 +22,14 @@ class FeedController: UICollectionViewController {
     }
     // MARK: - Helpers
     private func configureUI() {
-        
         collectionView.backgroundColor = .white
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
-        
+        let refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        collectionView.refreshControl = refresher
     }
+    
     // MARK: - Actions
     @objc
     private func handleLogout() {
@@ -43,11 +45,18 @@ class FeedController: UICollectionViewController {
         }
     }
     
+    @objc
+    private func handleRefresh() {
+        self.posts.removeAll()
+        self.collectionView.reloadData()
+        fetchPosts()
+    }
     
     // MARK: - API
     func fetchPosts() {
         PostService.fetchPosts { posts in
             self.posts = posts
+            self.collectionView.refreshControl?.endRefreshing()
             self.collectionView.reloadData()
         }
     }
